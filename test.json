@@ -1,0 +1,65 @@
+    {  
+        "Monday": {
+            "name" : "Push Day", 
+            "exercise": ["Bench press 3 sets x 10-12",
+            "Inciline Bech Press 3 sets x10-12",
+            "High to Low Cable Flys 3 sets x10-12",
+            "Shoulder Press 3 sets x 10-12", 
+            "Lateral Raises 4 sets x 10-15",
+            "Rear Delt Cable Fly 3 sets x 10-12",
+            "Skullcrushers 1 sets x 8- 1 sets x 15",
+            "Tricep Rope Pushdown 1 sets x 8 - 1 sets x sets 15"]
+        },
+        "Tuesday": { 
+            "name" : "Pull Day", 
+            "exercise": ["Wide Grip Front Lat Pulldown 2 sets x 8-12 reps",
+            "Barbel Rows 3 sets x  8-12",
+            "Unilateral Cable Pull downs 3 sets x 10-12", 
+            "Rear Delt Cable Fly 3 sets x 10-12",
+            "Preacher Curl 4 sets x 10-12",
+            "Incline DUmbell curl 4 sets x 10-12",
+            "Ez bar reverse curl 4 sets x 8-12"]
+        },
+        "Wednesday": { 
+            "name" : "Leg Day",  
+            "exercise": ["DeadLift 3 sets x 5-8 20-50% of your maximum capacity 2 sets x Failure 90% of your maximum  capacity",
+            "Leg Press 3 sets x 8-12",
+            "Bulgarian Split Squat 2 sets x 8-12",
+            "Seated Leg Curl 3 sets x 12-15 ", 
+            "Standing Calf Raise 4 sets x 15-20 "]
+        },
+        "Thursday": {
+            "name" : "Chest and Back",   
+            "exercise": ["Incline Dumbbelll Press 3 sets x 8-12",
+            "Upright Bench Dumble 3 sets x 10-15",
+            "Dips (with wieght) 3xfailure",
+            "Pull Ups 3sets x Failure with wieght possibly", 
+            "T-Bar row 4 sets x 8-12",
+            "Unilateral Lat Pull Down 3 sets x 10-12",
+            "low row machine 3 sets x 8-10"]
+        },
+        "Friday": {
+            "name" : "Shoulder and Arms",   
+            "exercise": ["Shoulder Press 3 sets x 10-12",
+            "Rear Delt Cable Fly 3 sets x 10-12",
+            "Lateral Raises 4x10-15",
+            "Dumbbell Shrug 3 sets 10-12 ", 
+            "Skull Crushers 4 sets x 10",
+            "Single Arm Tricep Pulldown 4 sets x 8-10",
+            "Hammer Curl 4 sets x 10-12",
+            "Incline Dumbbell Curls 4 sets x 10-12",
+            "dumbbell one arm reverse wrist curl 4 sets 8-12"]
+        },
+        "Saturday": {
+            "name" : "Leg Day",   
+            "exercise": ["Squat 4 sets x 8-12",
+            "Leg Press 3 sets x 8-12",
+            "RDL 3 sets x 10",
+            "Hamstring Curl 3 sets x 10-12", 
+            "Calf Raises 3 sets x 12-20"]  
+        },
+        "Sunday": { 
+            "name" : "Ngocok Wir",  
+            "exercise": "Rest Boss turu"   
+        }     
+    }  
