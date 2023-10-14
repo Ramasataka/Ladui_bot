@@ -278,13 +278,15 @@ async def on_message(messsage):
     bad_words = [
     "nigga", "niga","nigger", "nig4","nigg4","memek","pepek","anjing","ajg","asu","bitch", "ngentot",
     "bangsat","jancuk","jancok","kontol","goblog", "goblok", "tolol","entot","ngontol","anj1ng","rama babi","kentod"
-    ,"Anjwng"
+    ,"Anjwng","memeck"
         ]
     
 
     for bad_word in bad_words:
-        pattern = rf"\b{re.escape(bad_word)}\w*\b"
+        pattern = rf"\b{re.escape(bad_word)}\b"
         if re.search(pattern, content, re.IGNORECASE):
+            # censored_content = content.replace(bad_word, f'||{bad_word}||')
+            # await messsage.edit(content=censored_content)
             query = "SELECT no, warn FROM user WHERE username = %s"
             cursor.execute(query, (username,))
             existing_user = cursor.fetchone()
@@ -368,8 +370,8 @@ async def blackjack(interc : discord.interactions, amouth_bet : int):
         dealer_hand.add_card(deck.deal(1))
 
     embed = discord.Embed(title="Welcome to blackjack",
-                         description="--------------------------------"
-                         ,color=discord.Color.from_rgb(255, 215, 0) )
+                        description="--------------------------------"
+                        ,color=discord.Color.from_rgb(255, 215, 0) )
     
 
     embed.add_field(name="Dealer's hand:", value=dealer_hand.display(), inline=False)
@@ -405,9 +407,9 @@ async def blackjack(interc : discord.interactions, amouth_bet : int):
             embed = discord.Embed(title=result['text'] ,
                         description="--------------------------------",
                         color=resultColor)
-            embed.add_field(name="Dealer's hand:", value=dealer_hand.display(show_all_dealer_cards=True), inline=False)
+            embed.add_field(name="Dealer's hand:", value=dealer_hand.display(show_all_dealer_cards=True,  game_over=True), inline=False)
             embed.add_field(name="Dealer's hand value:", value=dealer_hand_value, inline=False)
-            embed.add_field(name="Your hand:", value=player_hand.display(), inline=False)
+            embed.add_field(name="Your hand:", value=player_hand.display(game_over=True), inline=False)
             embed.add_field(name="Your hand value:", value=player_hand_value, inline=False)
             embed.set_footer(text=f'Your get $ {resultBet}')
             hit.disabled = True
@@ -426,9 +428,9 @@ async def blackjack(interc : discord.interactions, amouth_bet : int):
         embed = discord.Embed(title=result['text'] ,
                         description="--------------------------------",
                         color=resultColor)
-        embed.add_field(name="Dealer's hand:", value=dealer_hand.display(show_all_dealer_cards=True), inline=False)
+        embed.add_field(name="Dealer's hand:", value=dealer_hand.display(show_all_dealer_cards=True, game_over=True), inline=False)
         embed.add_field(name="Dealer's hand value:", value=dealer_hand_value, inline=False)
-        embed.add_field(name="Your hand:", value=player_hand.display(), inline=False)
+        embed.add_field(name="Your hand:", value=player_hand.display( game_over=True), inline=False)
         embed.add_field(name="Your hand value:", value=player_hand_value, inline=False)
         embed.set_footer(text=f'Your get $ {resultBet}')
         
