@@ -72,18 +72,20 @@ class Hand:
     def is_blackjack(self):
         return self.get_value() == 21
 
-    def display(self, show_all_dealer_cards=False):
+    def display(self, show_all_dealer_cards=False, game_over=False):
         displayed_cards = []
+        cumulative_value = 0
 
         for index, card in enumerate(self.cards):
             if index == 0 and self.dealer and not show_all_dealer_cards and not self.is_blackjack():
                 displayed_cards.append('```?```')
             else:
+                cumulative_value += card.rank["value"]
                 displayed_cards.append(f'```{str(card)}```')
 
-        if not self.dealer:
+        if not self.dealer or game_over:  # Don't show the cumulative value if it's the dealer's turn and the game is not over
             return f'{"".join(displayed_cards)}\nValue: {self.get_value()}'
         else:
+            displayed_cards.append(f'Value: ? + {cumulative_value}')
             return f'{"".join(displayed_cards)}'
-
 
