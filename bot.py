@@ -278,7 +278,7 @@ async def on_message(messsage):
     bad_words = [
     "nigga", "niga","nigger", "nig4","nigg4","memek","pepek","anjing","ajg","asu","bitch", "ngentot",
     "bangsat","jancuk","jancok","kontol","goblog", "goblok", "tolol","entot","ngontol","anj1ng","rama babi","kentod"
-    ,"Anjwng","memeck"
+    ,"anjwng","memeck"
         ]
     
 
@@ -445,6 +445,7 @@ async def blackjack(interc : discord.interactions, amouth_bet : int):
     view.add_item(stand)
 
     await interc.response.send_message(embed=embed, view=view)
+                                    
 
 bot.run(settings.TOKEN)
 

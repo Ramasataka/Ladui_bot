@@ -83,7 +83,7 @@ class Hand:
                 cumulative_value += card.rank["value"]
                 displayed_cards.append(f'```{str(card)}```')
 
-        if not self.dealer or game_over:  # Don't show the cumulative value if it's the dealer's turn and the game is not over
+        if not self.dealer or game_over:
             return f'{"".join(displayed_cards)}\nValue: {self.get_value()}'
         else:
             displayed_cards.append(f'Value: ? + {cumulative_value}')
